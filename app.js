@@ -4,6 +4,7 @@ const express = require("express");
 const dbconfig = require("./dbconf.js");
 const mariadb = require("mariadb/callback");
 
+// const connection = mysql.createConnection(dbconfig);
 const connection = mariadb.createConnection(dbconfig);
 const app = express();
 
@@ -72,6 +73,10 @@ app.use(function (error, req, res, next) {
 app.listen(3000, () => {
     console.log("Express Server listening on port 3000");
 });
+
+// https://port-0-nodeassignment-1mrfs72llwxfiz1a.sel5.cloudtype.app/
+// paas 기반(cloudtype 프리 티어 사용) 웹 사이트
+// mysql fork 버전인 maria DB로 작성
 
 // 홈페이지
 app.get("/main", (req, res) => {
