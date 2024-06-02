@@ -74,7 +74,7 @@ app.listen(3000, () => {
 
 // 홈페이지
 app.get("/main", (req, res) => {
-    connection.query("select * from posts", (error, rows) => {
+    connection.query("select * from posts order by date desc", (error, rows) => {
 
         var frontHtml = "<html><h1>게시글</h1><body><table id=\"post_table\"><thead><th>날짜</th><th>제목</th><th>작성자</th><th><button onclick=\"GoToWritePage()\">글쓰기</button></th></thead><tbody>";
         var rowData = "";
