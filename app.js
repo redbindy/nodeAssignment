@@ -118,7 +118,7 @@ app.post('/submit', (req, res) => {
     //     .digest("hex");
     const content = req.body.content;
 
-    const insertQuery = "insert into Posts values("
+    const insertQuery = "insert into posts values("
         + '\"' + author + '\"'
         + ", "
         + '\"' + title + '\"'
