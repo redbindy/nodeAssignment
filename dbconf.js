@@ -1,7 +1,15 @@
+// module.exports = {
+//     host: "127.0.0.1", 
+//     prot: "3306", 
+//     user: "rose", 
+//     password: "rose", 
+//     database: "diamond"
+// }
+
 module.exports = {
-    host: "127.0.0.1", 
+    host: "dbnodeassignment", 
     prot: "3306", 
-    user: "rose", 
+    user: "root", 
     password: "rose", 
-    database: "diamond"
+    database: "mysql"
 }
