@@ -1,9 +1,10 @@
 // 실습
 const express = require("express");
-const mysql = require("mysql");
+// const mysql = require("mysql");
 const dbconfig = require("./dbconf.js");
+const mariadb = require("mariadb/callback");
 
-const connection = mysql.createConnection(dbconfig);
+const connection = mariadb.createConnection(dbconfig);
 const app = express();
 
 app.get("/", (req, res) => {
